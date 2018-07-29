@@ -27,9 +27,9 @@ public class UserController {
         HttpSession session = request.getSession();
         Map<String, Object> map = new HashMap<String, Object>();
         int ans = userServiceImpl.checkoutUser(name, password);
-        if (ans == 0)
+        if (ans == 0) {
             map.put("code", 0);
-        else {
+        } else {
             map.put("code", 200);
             User user = userServiceImpl.findById(ans);
             session.setAttribute("user", user);

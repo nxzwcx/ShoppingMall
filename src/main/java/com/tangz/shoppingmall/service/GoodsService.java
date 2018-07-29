@@ -6,13 +6,13 @@ import java.util.List;
 
 
 public interface GoodsService {
-    public int insertGoods(Goods goods);
+    int insertGoods(Goods goods);
 
-    public Goods findById(int id);
+    Goods findById(int id);
 
-    public int updateGoods(Goods goods);
+    int updateGoods(Goods goods);
 
-    public int deleteGoods(int id);
+    int deleteGoods(int id);
 
-    public List<Goods> getGoodsList();
+    List<Goods> getGoodsList();
 }

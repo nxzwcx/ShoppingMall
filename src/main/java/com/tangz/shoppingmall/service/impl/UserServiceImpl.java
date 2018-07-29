@@ -11,6 +11,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Override
     public User findById(int id) {
         return userDao.findById(id);
     }
@@ -18,12 +19,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public int checkoutUser(String name, String password) {
         User user = userDao.findByName(name);
-        if (user == null || !password.equals(user.getPassword()))
+        if (user == null || !password.equals(user.getPassword())) {
             return 0;
+        }
 
         return user.getId();
     }
 
+    @Override
     public User findByName(String name) {
         return userDao.findByName(name);
     }

@@ -3,9 +3,9 @@ package com.tangz.shoppingmall.service;
 import com.tangz.shoppingmall.meta.User;
 
 public interface UserService {
-    public User findById(int id);
+    User findById(int id);
 
-    public User findByName(String name);
+    User findByName(String name);
 
-    public int checkoutUser(String name, String password);
+    int checkoutUser(String name, String password);
 }
